@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Inter, Lora, Fira_Code } from "next/font/google";
 import "./globals.css";
 import Providers from "@/context/providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -20,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="dark">
       <body
-        className={`${geistSans.variable} ${geistSans.className} antialiased`}
+        className={`${inter.variable} ${lora.variable} ${firaCode.variable} antialiased`}
       >
         <Providers>{children}</Providers>
       </body>

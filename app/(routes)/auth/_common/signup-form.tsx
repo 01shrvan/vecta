@@ -135,11 +135,7 @@ const SignUpForm = () => {
                   )}
                 />
 
-                <Button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full text-white"
-                >
+                <Button type="submit" disabled={isLoading} className="w-full">
                   {isLoading && (
                     <RiLoader2Line className="w-4 h-4 animate-spin" />
                   )}

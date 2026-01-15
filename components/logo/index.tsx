@@ -6,14 +6,9 @@ const Logo = (props: { url?: string }) => {
     <Link href={url} className="w-fit flex items-center gap-2">
       <div className="flex aspect-square size-12 items-center justify-center rounded-md overflow-hidden">
         <img
-          src="/logo.svg"
-          alt="Logo"
-          className="size-full scale-[1.8] dark:hidden"
-        />
-        <img
           src="/logo-light.svg"
           alt="Logo"
-          className="size-full scale-[1.8] hidden dark:block"
+          className="size-full scale-[1.8]"
         />
       </div>
 

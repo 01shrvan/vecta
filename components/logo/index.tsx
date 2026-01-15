@@ -4,8 +4,17 @@ const Logo = (props: { url?: string }) => {
   const { url = "/" } = props;
   return (
     <Link href={url} className="w-fit flex items-center gap-2">
-      <div className="flex aspect-square size-8 items-center justify-center rounded-md overflow-hidden bg-primary text-primary-foreground">
-        <img src="/logo.svg" alt="Logo" width={36} height={36} />
+      <div className="flex aspect-square size-12 items-center justify-center rounded-md overflow-hidden">
+        <img
+          src="/logo.svg"
+          alt="Logo"
+          className="size-full scale-[1.8] dark:hidden"
+        />
+        <img
+          src="/logo-light.svg"
+          alt="Logo"
+          className="size-full scale-[1.8] hidden dark:block"
+        />
       </div>
 
       <div className="flex text-left text-base leading-tight">

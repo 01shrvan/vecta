@@ -1,4 +1,5 @@
 import { betterAuth } from "better-auth";
+import { openAPI, bearer } from "better-auth/plugins";
 import { prismaAdapter } from "better-auth/adapters/prisma";
 import { PrismaClient } from "@/generated/prisma/client";
 
@@ -9,5 +10,10 @@ export const auth = betterAuth({
   }),
   emailAndPassword: {
     enabled: true,
+    minPasswordLength: 4,
   },
+  plugins: [
+    openAPI(),
+    bearer()
+  ],
 });

@@ -65,6 +65,7 @@ const SignUpForm = () => {
           setIsLoading(false);
         },
         onError: (ctx) => {
+          setIsLoading(false);
           toast.error(ctx.error.message);
         },
       },
@@ -75,9 +76,9 @@ const SignUpForm = () => {
     <div className="flex flex-col gap-6">
       <Card>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Create an Account</CardTitle>
+          <CardTitle className="text-xl">Get started with Vecta</CardTitle>
           <CardDescription>
-            Create a vecta account to start using the platform.
+            Enter your details below to create your account
           </CardDescription>
           <CardContent>
             <Form {...form}>

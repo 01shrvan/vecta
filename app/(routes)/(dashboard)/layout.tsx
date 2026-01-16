@@ -6,6 +6,7 @@ import AppSidebar from "@/components/sidebar";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { auth } from "@/lib/auth";
+import MainContent from "./_common/main-content";
 
 export default async function DashboardLayout({
   children,
@@ -31,9 +32,9 @@ export default async function DashboardLayout({
       <NuqsAdapter>
         <SidebarProvider>
           <AppSidebar />
-
           <SidebarInset className="relative overflow-x-hidden pt-0">
-            {children}
+            <MainContent>{children}</MainContent>
+            {/*<NoteDialog /> */}
           </SidebarInset>
         </SidebarProvider>
       </NuqsAdapter>

@@ -80,7 +80,7 @@ const SignInForm = () => {
       <Card>
         <CardHeader className="text-center">
           <CardTitle className="text-xl">Welcome Back!</CardTitle>
-          <CardDescription>Log in to your vecta account</CardDescription>
+          <CardDescription>Log in to  account</CardDescription>
           <CardContent>
             <Form {...form}>
               <form
